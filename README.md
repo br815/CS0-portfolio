@@ -2,7 +2,7 @@
 
 # CS0 Lecture/Laboratory Portfolio | Bushra Rahman
 ## CS 1336/1136 (Programming Fundamentals Lecture/Laboratory) | UTD Spring 2019
-GitHub Pages link: https://br815.github.io/CS0_Portfolio/
+GitHub Pages link: https://br815.github.io/CS0-portfolio/
 
 This repository contains university programming assignments from my introductory C++ [lecture](/CS1336/readme.md) and [laboratory](/CS1136/readme.md) courses.
 
@@ -23,7 +23,7 @@ The purpose of this repository is archival and educational:
 ## Instructions to Install MinGW
 A C++ compiler is necessary to run these assignments (eg. the `g++` compiler in MinGW, a Microsoft Windows port of the GNU Compiler Collection).
 
-To install MinGW on Windows 11 or less, follow [these instructions](https://github.com/br815/CS1_Portfolio/blob/main/CS1337/Eclipse_for_Windows_with_MinGW.pdf) (refer to Pages 3-4 of the linked PDF):
+To install MinGW on Windows 11 or less, follow [these instructions](https://github.com/br815/CS1-portfolio/blob/main/CS1337/Eclipse_for_Windows_with_MinGW.pdf) (refer to Pages 3-4 of the linked PDF):
 1. Download the latest version of the MinGW installer from [this SourceForge link](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/).
 2. Run the installer. On the second installer screen, make sure to select the `X86_64` architecture. Don’t make any other changes with the installer.
 3. Add the MinGW compiler the `Path` Environment Variable. [This YouTube video](https://www.youtube.com/watch?v=uadGsNA6h5Q) has the steps to follow:
@@ -57,13 +57,13 @@ To install MinGW on Windows 11 or less, follow [these instructions](https://gith
     warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
     ```
     <!-- CODE END -->
-After installing MinGW and adding it to `Path`, make sure to restart your IDE to avoid compilation errors.
+4. After installing MinGW and adding it to `Path`, make sure to restart your IDE to avoid compilation errors.
 
 ## C++ Compilation & Execution Overview
 (Using [CS1336](/CS1336/) as an example. CS1336 contains a [src](/CS1336/src/) folder,\
 which contains 2 source files [main.cpp](/CS1336/src/main.cpp) and [hw_exercises.cpp](/CS1336/src/hw_exercises.cpp), and 1 header file [hw_exercises.h](/CS1336/src/hw_exercises.h).)
 
-Open terminal in `CS0_Portfolio` and run:
+Open terminal in `CS0-portfolio` and run:
 <!-- CODE START -->
 ```
 cd CS1336                       # cd to project root

@@ -5,7 +5,7 @@
 These homework assignments were done through the course and have accompanying instructions.
 
 ## Execution Instructions
-Open terminal in `CS0_Portfolio` and run:
+Open terminal in `CS0-portfolio` and run:
 <!-- CODE START -->
 ```
 cd CS1336
@@ -16,13 +16,13 @@ build/hw
 <!-- CODE END -->
 
 ## Homework Instructions
-* [HW 1: Basic Programming](/CS1336/instructions/HW1_BasicProgramming.pdf)
-* [HW 2: Basic Calculations](/CS1336/instructions/HW2_BasicCalculations.pdf)
-* [HW 3: Calculations Continued](/CS1336/instructions/HW3_CalculationsContinued.pdf)
-* [HW 4: Calculations Review](/CS1336/instructions/HW4_CalculationsReview.pdf)
-* [HW 5: Selection Logic](/CS1336/instructions/HW5_SelectionLogic.pdf)
+* [HW 1: Basic Programming](/CS1336/instructions/HW1_Basic_Programming.pdf)
+* [HW 2: Basic Calculations](/CS1336/instructions/HW2_Basic_Calculations.pdf)
+* [HW 3: Calculations Continued](/CS1336/instructions/HW3_Calculations_Continued.pdf)
+* [HW 4: Calculations Review](/CS1336/instructions/HW4_Calculations_Review.pdf)
+* [HW 5: Selection Logic](/CS1336/instructions/HW5_Selection_Logic.pdf)
 * [HW 6: Looping 1](/CS1336/instructions/HW6_Looping1.pdf)
-* [HW 7: Looping 2 and File Operations](/CS1336/instructions/HW7_Looping2AndFileOperations.pdf)
+* [HW 7: Looping 2 and File Operations](/CS1336/instructions/HW7_Looping2_And_File_Operations.pdf)
 * [HW 8: Functions](/CS1336/instructions/HW8_Functions.pdf)
 * [HW 9: Arrays](/CS1336/instructions/HW9_Arrays.pdf)
 

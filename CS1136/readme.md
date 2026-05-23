@@ -4,8 +4,8 @@
 ## Author: Bushra Rahman
 These labs assignments were done through [zyBooks](https://www.zybooks.com/).
 
-## Execution Instructions (Simple)
-Open terminal in `CS0_Portfolio` and run:
+## Execution Instructions
+Open terminal in `CS0-portfolio` and run:
 <!-- CODE START -->
 ```
 cd CS1136
