@@ -11,6 +11,8 @@ Open terminal in `CS0-portfolio` and run:
 cd CS1136
 mkdir build
 g++ src/main.cpp src/lab_exercises.cpp -o build/labs
+# Or use the *.cpp wildcard for a conciser compilation instruction:
+g++ src/*.cpp -o build/labs
 build/labs
 ```
 <!-- CODE END -->
@@ -34,18 +36,18 @@ build/labs
 * [lab_exercises.cpp](/CS1136/src/lab_exercises.cpp): implementation of 21 homework functions and 19 helper functions
 
 ## data Folder
-When executing from the project root, input & output file names must be provided through their relative path (ie. with the prepend `data/`).
+When executing from the project root, input & output file names must be provided through their relative path (ie. with the prepend `data/`). (This functionality is hard-coded into `lab_exercises.cpp`.)
 * Lab 7-1:
-  * [lab7ex1_sales.txt](/CS1136/data/lab7ex1_sales.txt): input file
-  * [lab7ex1_saleschart.txt](/CS1136/data/lab7ex1_saleschart.txt): output file
+  * [7-1_sales.txt](/CS1136/data/7-1_sales.txt): input file
+  * [7-1_saleschart.txt](/CS1136/data/7-1_saleschart.txt): output file
 * Lab 7-2:
-  * [lab7ex2_avg.txt](/CS1136/data/lab7ex2_avg.txt): input file
-  * [lab7ex2_invalids.txt](/CS1136/data/lab7ex2_invalids.txt): output file
+  * [7-2_avg.txt](/CS1136/data/7-2_avg.txt): input file
+  * [7-2_invalids.txt](/CS1136/data/7-2_invalids.txt): output file
 * Lab 9-2:
-  * [lab9ex2_data.txt](/CS1136/data/lab9ex2_data.txt): input file
-  * [lab9ex2_output.xls](/CS1136/data/lab9ex2_output.xls): output file
+  * [9-2_data.txt](/CS1136/data/9-2_data.txt): input file
+  * [9-2_output.xls](/CS1136/data/9-2_output.xls): output file
 * Lab 10-1:
-  * [lab10ex1_student.txt](/CS1136/data/lab10ex1_student.txt): input file
-  * [lab10ex1_answers.txt](/CS1136/data/lab10ex1_answers.txt): input file
+  * [10-1_student.txt](/CS1136/data/10-1_student.txt): input file
+  * [10-1_answers.txt](/CS1136/data/10-1_answers.txt): input file
 * Lab 10-2:
-  * [lab10ex2_grades.txt](/CS1136/data/lab10ex2_grades.txt): input file
+  * [10-2_grades.txt](/CS1136/data/10-2_grades.txt): input file

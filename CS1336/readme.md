@@ -11,6 +11,8 @@ Open terminal in `CS0-portfolio` and run:
 cd CS1336
 mkdir build
 g++ src/main.cpp src/hw_exercises.cpp -o build/hw
+# Or use the *.cpp wildcard for a conciser compilation instruction:
+g++ src/*.cpp -o build/hw
 build/hw
 ```
 <!-- CODE END -->
@@ -45,17 +47,17 @@ build/hw
 * [hw_exercises.cpp](/CS1336/src/hw_exercises.cpp): implementation of 20 homework functions and 12 helper functions
 
 ## data Folder
-When executing from the project root, input & output file names must be provided through their relative path (ie. with the prepend `data/`).
+When executing from the project root, input & output file names must be provided through their relative path (ie. with the prepend `data/`). (This functionality is hard-coded into `hw_exercises.cpp`.)
 * HW 7-2:
-  * [hw7ex2_NumListLong.txt](/CS1336/data/hw7ex2_NumListLong.txt): input file choice 1 (for standard output)
-  * [hw7ex2_NumListShort.txt](/CS1336/data/hw7ex2_NumListShort.txt): input file choice 2 (for program testing)
+  * [7-2_NumListLong.txt](/CS1336/data/7-2_NumListLong.txt): input file choice 1 (for standard output)
+  * [7-2_NumListShort.txt](/CS1336/data/7-2_NumListShort.txt): input file choice 2 (for program testing)
 * HW 8-1:
-  * [hw8ex1_PrimeOut.txt](/CS1336/data/hw8ex1_PrimeOut.txt): output file
+  * [8-1_PrimeOut.txt](/CS1336/data/8-1_PrimeOut.txt): output file
 * HW 9-1:
-  * [hw9ex1_LSStandard.txt](/CS1336/data/hw9ex1_LSStandard.txt): input file
-  * [hw9ex1_LSTest.txt](/CS1336/data/hw9ex1_LSTest.txt): input file
+  * [9-1_LSStandard.txt](/CS1336/data/9-1_LSStandard.txt): input file
+  * [9-1_LSTest.txt](/CS1336/data/9-1_LSTest.txt): input file
 * HW 9-2:
-  * [hw9ex2_StudentsListLong.txt](/CS1336/data/hw9ex2_StudentsListLong.txt): input file choice 1 (for standard output)
-  * [hw9ex2_StudentsListShort.txt](/CS1336/data/hw9ex2_StudentsListShort.txt): input file choice 2 (for program testing)
-  * [hw9ex2_CorrectList.txt](/CS1336/data/hw9ex2_CorrectList.txt): input file
-  * [hw9ex2_ExamAnalysis.txt](/CS1336/data/hw9ex2_ExamAnalysis.txt): output file
+  * [9-2_StudentsListLong.txt](/CS1336/data/9-2_StudentsListLong.txt): input file choice 1 (for standard output)
+  * [9-2_StudentsListShort.txt](/CS1336/data/9-2_StudentsListShort.txt): input file choice 2 (for program testing)
+  * [9-2_CorrectList.txt](/CS1336/data/9-2_CorrectList.txt): input file
+  * [9-2_ExamAnalysis.txt](/CS1336/data/9-2_ExamAnalysis.txt): output file

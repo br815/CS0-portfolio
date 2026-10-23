@@ -89,7 +89,7 @@ Technically, compilation & execution *can* occur from anywhere as long as the us
 Similar compilation & execution behavior can be achieved through alternative commands, like:
 <!-- CODE START -->
 ```
-cd CS1336/src
+cd CS1336/src                   # cd into src folder
 g++ *.cpp                       # or, g++ main.cpp hw_exercises.cpp (note that here, the default a.exe file is produced directly in src)
 cd ..                           # go back to the project root
 src/a.exe                       # can be executed with or without providing the .exe extension

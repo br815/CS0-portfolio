@@ -955,8 +955,8 @@ void hw7ex2()
 {
 	// creates an input file for the random number list
 	ifstream inputFile;
-	// the input files provided are hw7ex2_NumListLong.txt or hw7ex2_NumListShort.txt
-	string inputFileName = "hw7ex2_NumListLong.txt";
+	// the input files provided are 7-2_NumListLong.txt or 7-2_NumListShort.txt
+	string inputFileName = "7-2_NumListLong.txt";
 	// get the input file path
 	inputFileName = getFilepath(inputFileName);
 	// open the input file
@@ -1045,8 +1045,8 @@ void hw8ex1()
 
 	// creates the output file for the prime numbers
 	ofstream outputFile;
-	// the output file provided is hw8ex1_PrimeOut.txt
-	string outputFileName = "hw8ex1_PrimeOut.txt";
+	// the output file provided is 8-1_PrimeOut.txt
+	string outputFileName = "8-1_PrimeOut.txt";
 	// get the output file path
 	outputFileName = getFilepath(outputFileName);
 	// open the output file
@@ -1274,10 +1274,10 @@ void hw9ex1()
 	// This driver function body was formerly contained within main() of hw9ex1's own source file.
 
 	// name standard input file
-	string inputFileStandardName = "hw9ex1_LSStandard.txt";
+	string inputFileStandardName = "9-1_LSStandard.txt";
 
 	// name test input file
-	string inputFileTestName = "hw9ex1_LSTest.txt";
+	string inputFileTestName = "9-1_LSTest.txt";
 
 	// create arrays for both input files
 	int LSStandard[hw9ex1_STANDARD_SIZE];
@@ -1435,7 +1435,7 @@ void hw9ex2()
 	// input a file name
 	string inputFileName;
 	cout << "Please enter the name of the input file containing all students' answers: ";
-	// the input files provided are hw9ex2_StudentsListLong.txt or hw9ex2_StudentsListShort.txt
+	// the input files provided are 9-2_StudentsListLong.txt or 9-2_StudentsListShort.txt
 	cin >> inputFileName;
 
 	// call hw9ex2_readArray() on the students' answers
@@ -1447,7 +1447,7 @@ void hw9ex2()
 	{
 		// input the file with the correct answers
 		cout << "Please enter the name of the input file containing the correct answers: ";
-		cin >> inputFileName;	// the input file provided is hw9ex2_CorrectList.txt
+		cin >> inputFileName;	// the input file provided is 9-2_CorrectList.txt
 		correctResponseCount = hw9ex2_readArray(correctResponses, hw9ex2_CORRECT_RESP_ARRAY_SIZE, getFilepath(inputFileName));	// get the input file path
 	}
 
@@ -1522,8 +1522,8 @@ void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char c
 
 	// creates an output file for the calculated report
 	ofstream outputFile;
-	// the output file provided is hw9ex2_ExamAnalysis.txt
-	string outputFileName = "hw9ex2_ExamAnalysis.txt";
+	// the output file provided is 9-2_ExamAnalysis.txt
+	string outputFileName = "9-2_ExamAnalysis.txt";
 	// get the output file path
 	outputFileName = getFilepath(outputFileName);
 	// open the output file
