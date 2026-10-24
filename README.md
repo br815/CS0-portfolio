@@ -104,7 +104,7 @@ Note that compilation and execution can be done either...
 * Lecture Course: CS 1336
     * [CS 1336 readme](/CS1336/readme.md)
 * Laboratory Course: CS 1136
-    * [CS 1136 readme](/CS1336/readme.md)
+    * [CS 1136 readme](/CS1136/readme.md)
 
 ## Notes
 As a learning exercise, some of my code explores alternative designs that go beyond what was required for these courses.
