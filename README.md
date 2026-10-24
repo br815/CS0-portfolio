@@ -90,7 +90,7 @@ Similar compilation & execution behavior can be achieved through alternative com
 <!-- CODE START -->
 ```
 cd CS1336/src                   # cd to project src folder
-g++ *.cpp                       # or, g++ main.cpp hw_exercises.cpp (note that here, the default a.exe file is produced directly in src)
+g++ *.cpp                       # or, <g++ main.cpp hw_exercises.cpp> (note that here, the default a.exe file is produced directly in src)
 cd ..                           # go back to the project root
 src/a.exe                       # can be executed with or without providing the .exe extension
 ```
