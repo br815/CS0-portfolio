@@ -4,7 +4,7 @@
 ## Author: Bushra Rahman
 GitHub Pages link: https://br815.github.io/CS0-portfolio/
 
-This repository contains university programming assignments from my introductory C++ [lecture](/CS1336/readme.md) and [laboratory](/CS1136/readme.md) courses.
+This repository contains university programming assignments from my introductory C++ lecture and laboratory courses.
 
 The purpose of this repository is archival and educational:
 - to track my progress learning C++
@@ -60,7 +60,7 @@ To install MinGW on Windows 11 or less, follow [these instructions](https://gith
 4. After installing MinGW and adding it to `Path`, make sure to restart your IDE to avoid compilation errors.
 
 ## C++ Compilation & Execution Overview
-(Using [CS1336](/CS1336/) as an example. CS1336 contains a [src](/CS1336/src/) folder,\
+(Using [`CS1336/`](/CS1336/) as an example. CS1336 contains a [`src/`](/CS1336/src/) folder,\
 which contains 2 source files [main.cpp](/CS1336/src/main.cpp) and [hw_exercises.cpp](/CS1336/src/hw_exercises.cpp), and 1 header file [hw_exercises.h](/CS1336/src/hw_exercises.h).)
 
 Open terminal in `CS0-portfolio` and run:
@@ -74,17 +74,17 @@ build/hw                        # provide the build folder as the path to the .e
 <!-- CODE END -->
 C++ compilation & execution can occur from anywhere through the use of relative paths, as long as the compilation instruction specifies the relative path to the `.cpp` source files & the execution instruction specifies the relative path to the `.exe` executable file. However, execution *should* occur from the project root (because that is the conventional location from which your program should retrieve any IO files).
 
-In order to achieve both compilation & execution from the project root, this compilation instruction goes through `src/` to compile all `.cpp` source files in [src](/CS1336/src/). Alternatively, each source file can be compiled individually through their paths:
+In order to achieve both compilation & execution from the project root, this compilation instruction goes through `src/` to compile all `.cpp` source files in `src/`. Alternatively, each source file can be compiled individually through their paths:
 <!-- CODE START -->
 ```
 g++ src/main.cpp src/hw_exercises.cpp -o build/hw
 ```
 <!-- CODE END -->
-By default, C++ compilation produces `.exe` files directly in the same folder where compilation occurred; however, the provided compilation instruction uses the `-o` flag to produce the `.exe` file in a [build](/CS1336/build/) folder for clearer file organization.
+By default, C++ compilation produces `.exe` files directly in the same folder where compilation occurred; however, the provided compilation instruction uses the `-o` flag to produce the `.exe` file in a `build/` folder for clearer file organization.
 
 Then, execution can occur from the project root as long as the path to the executable is specified, which for this project is through `build/`.
 
-Technically, compilation & execution *can* occur from anywhere as long as the user provides the necessary relative file paths to the source files & executable. However, for user ease in this project, file paths to IO files are hard-coded in the source code to be preprended with `data/` so that the user can execute easily from the project root while still only needing to provide the base name of any IO file (eg. [`hw7ex2_NumListShort.txt`](/CS1336/data/hw7ex2_NumListShort.txt)). So for this project, compilation & execution *must* occur from the project root; or, the hard-coded preprending of the `data/` file path would need to be edited directly in the source code.
+Technically, compilation & execution *can* occur from anywhere as long as the user provides the necessary relative file paths to the source files & executable. However, for user ease in this project, file paths to IO files are hard-coded in the source code to be preprended with `data/` so that the user can execute easily from the project root while still only needing to provide the base name of any IO file (eg. [7-2_NumListShort.txt](/CS1336/data/7-2_NumListShort.txt)). So for this project, compilation & execution *must* occur from the project root; or, the hard-coded preprending of the `data/` file path would need to be edited directly in the source code.
 
 Similar compilation & execution behavior can be achieved through alternative commands, like:
 <!-- CODE START -->
@@ -99,6 +99,12 @@ src/a.exe                       # can be executed with or without providing the 
 Note that compilation and execution can be done either...
 * ...with or without providing the `.exe` extention (the code blocks above illustrate both)
 * ...with a forward slash `/` or backslash `\` (the code blocks above do it with `/`)
+
+## Course Readme Files
+* Lecture Course: CS 1336
+    * [CS 1336 readme](/CS1336/readme.md)
+* Laboratory Course: CS 1136
+    * [CS 1136 readme](/CS1336/readme.md)
 
 ## Notes
 As a learning exercise, some of my code explores alternative designs that go beyond what was required for these courses.

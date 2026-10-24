@@ -4,7 +4,7 @@
 ## Author: Bushra Rahman
 These labs assignments were done through [zyBooks](https://www.zybooks.com/).
 
-## Execution Instructions
+## Compilation & Execution Instructions
 Open terminal in `CS0-portfolio` and run:
 <!-- CODE START -->
 ```
@@ -17,7 +17,7 @@ build/labs
 ```
 <!-- CODE END -->
 
-## src Folder
+## `src/` Folder
 ### Header File
 * [lab_exercises.h](/CS1136/src/lab_exercises.h): contains 21 lab function prototypes
   * 1-1, 1-2
@@ -35,8 +35,8 @@ build/labs
 * [main.cpp](/CS1136/src/main.cpp): program driver containing `main()`
 * [lab_exercises.cpp](/CS1136/src/lab_exercises.cpp): implementation of 21 homework functions and 19 helper functions
 
-## data Folder
-When executing from the project root, input & output file names must be provided through their relative path (ie. with the prepend `data/`). (This functionality is hard-coded into `lab_exercises.cpp`.)
+## `data/` Folder
+When executing from the project root, input & output file names must be provided through their relative path (ie. with the prepend `data/`). (This functionality is hard-coded into [lab_exercises.cpp](/CS1136/src/lab_exercises.cpp).)
 * Lab 7-1:
   * [7-1_sales.txt](/CS1136/data/7-1_sales.txt): input file
   * [7-1_saleschart.txt](/CS1136/data/7-1_saleschart.txt): output file

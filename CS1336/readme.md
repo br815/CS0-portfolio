@@ -4,7 +4,7 @@
 ## Author: Bushra Rahman
 These homework assignments were done through the course and have accompanying instructions.
 
-## Execution Instructions
+## Compilation & Execution Instructions
 Open terminal in `CS0-portfolio` and run:
 <!-- CODE START -->
 ```
@@ -20,15 +20,15 @@ build/hw
 ## Homework Instructions
 * [HW 1: Basic Programming](/CS1336/instructions/HW1_Basic_Programming.pdf)
 * [HW 2: Basic Calculations](/CS1336/instructions/HW2_Basic_Calculations.pdf)
-* [HW 3: Calculations Continued](/CS1336/instructions/HW3_Calculations_Continued.pdf)
+* [HW 3: Calculations Continued](/CS1336/instructions/HW3_Calculations_Cont.pdf)
 * [HW 4: Calculations Review](/CS1336/instructions/HW4_Calculations_Review.pdf)
 * [HW 5: Selection Logic](/CS1336/instructions/HW5_Selection_Logic.pdf)
-* [HW 6: Looping 1](/CS1336/instructions/HW6_Looping1.pdf)
-* [HW 7: Looping 2 and File Operations](/CS1336/instructions/HW7_Looping2_And_File_Operations.pdf)
+* [HW 6: Introduction to Loops](/CS1336/instructions/HW6_Intro_to_Loops.pdf)
+* [HW 7: Loops Continued and File Operations](/CS1336/instructions/HW7_Loops_Cont_And_File_Operations.pdf)
 * [HW 8: Functions](/CS1336/instructions/HW8_Functions.pdf)
 * [HW 9: Arrays](/CS1336/instructions/HW9_Arrays.pdf)
 
-## src Folder
+## `src/` Folder
 ### Header File
 * [hw_exercises.h](/CS1336/src/hw_exercises.h): contains 20 homework function prototypes
   * 0-0
@@ -46,8 +46,8 @@ build/hw
 * [main.cpp](/CS1336/src/main.cpp): program driver containing `main()`
 * [hw_exercises.cpp](/CS1336/src/hw_exercises.cpp): implementation of 20 homework functions and 12 helper functions
 
-## data Folder
-When executing from the project root, input & output file names must be provided through their relative path (ie. with the prepend `data/`). (This functionality is hard-coded into `hw_exercises.cpp`.)
+## `data/` Folder
+When executing from the project root, input & output file names must be provided through their relative path (ie. with the prepend `data/`). (This functionality is hard-coded into [hw_exercises.cpp](/CS1336/src/hw_exercises.cpp).)
 * HW 7-2:
   * [7-2_NumListLong.txt](/CS1336/data/7-2_NumListLong.txt): input file choice 1 (for standard output)
   * [7-2_NumListShort.txt](/CS1336/data/7-2_NumListShort.txt): input file choice 2 (for program testing)
