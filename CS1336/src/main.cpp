@@ -23,9 +23,9 @@ struct HWExercise
 	/*	Use a function pointer so that a function can be called using user input:
 		1. *fp means a pointer* variable named fp
 		2. (*fp)() means (*fp) points to a function()
-		3. void (*fp)() means a pointer* fp to a function() that returns void
-		So the resulting statement is (*fp) + void() = void (*fp)() */
-    void (*fp)();
+		3. void(*fp)() means (*fp) points to a function() that returns void
+		So the resulting statement is (*fp) + void() = void(*fp)() */
+    void(*fp)();
 };
 // Global array of HWExercise structs.
 HWExercise HWExercises[17] =
@@ -50,7 +50,7 @@ int main()
 	int numHws = sizeof(HWExercises) / sizeof(HWExercises[0]);	// # of elements = total bytes divided by bytes of 1 element
 	int linePrinter = 0;
 	cout << "Homework Exercises:" << endl;
-	for (int i = 0; i < numHws; i++)
+	for(int i = 0; i < numHws; i++)
 	{
 		// print HWExercises[i] in the form #-#
 		cout << "| " << HWExercises[i].homeworkNum << "-" << HWExercises[i].exerciseNum;
@@ -60,7 +60,7 @@ int main()
 		// ensures 4 items per line so that printed box is 4x5, and also includes the last element of the struct array
 		if((linePrinter == 4) || (i == numHws - 1))
 		{
-			if (i == 8 || i == 11)
+			if(i == 8 || i == 11)
 			{
 				// if printing 5-2 or 7-1, print an asterisk
 				cout << "*";
@@ -77,7 +77,7 @@ int main()
 		}
 		else
 		{
-			if (i == 8 || i == 11)
+			if(i == 8 || i == 11)
 			{
 				// if printing 5-2 or 7-1, print an asterisk
 				cout << "*";
@@ -99,10 +99,10 @@ int main()
 	string userChoice;	                    // stores user's chosen hw exercise(s)
 
 	bool quitLoop = false;
-	while (quitLoop == false)               // while loop to continue asking user for userChoices until they exit
+	while(quitLoop == false)               // while loop to continue asking user for userChoices until they exit
 	{
 		// 1st task: print out appropriate user prompt (depending on if user has already picked at least 1 correct hw) and read in user input
-		if (userChoices.size() < 1)
+		if(userChoices.size() < 1)
 		{
     		cout << "Pick a homework exercise (in the form #-#):" << endl;
 		}
@@ -113,9 +113,9 @@ int main()
 		cin >> userChoice;
 
 		// 2nd task: handle quit command (also depends on if user has already picked at least 1 correct hw)
-		if (userChoice == "x" || userChoice == "X")
+		if(userChoice == "x" || userChoice == "X")
 		{
-			if (userChoices.size() < 1)
+			if(userChoices.size() < 1)
 			{
 				cout << "ERROR: You must pick at least one homework exercise before quitting." << endl;
 			}
@@ -132,7 +132,7 @@ int main()
 			int hwNum = 0;
 			int exNum = 0;
 			size_t delimiterPosition = userChoice.find(delimiter);
-			if (delimiterPosition != string::npos)
+			if(delimiterPosition != string::npos)
 			{
 				// Extract substrings for each part and convert to int
 				hwNum = stoi(userChoice.substr(0, delimiterPosition));	// from start to dash: hwNum
@@ -141,9 +141,9 @@ int main()
 
 			// loop through HWExercises for an exact match to hwNum and exNum
 			bool choiceMatches = false;
-			for (int i = 0; i < numHws; i++)
+			for(int i = 0; i < numHws; i++)
 			{
-				if (HWExercises[i].homeworkNum == hwNum && HWExercises[i].exerciseNum == exNum)
+				if(HWExercises[i].homeworkNum == hwNum && HWExercises[i].exerciseNum == exNum)
 				{
 					choiceMatches = true;
 					userChoices.push_back({hwNum, exNum});	// add int pair to vector storing valid userChoices
@@ -151,7 +151,7 @@ int main()
 				}
 			}
 
-			if (choiceMatches == false)
+			if(choiceMatches == false)
 			{
 				cout << "ERROR: You must pick a valid homework exercise in the form specified." << endl;
 			}
@@ -162,7 +162,7 @@ int main()
 
 
 	// Third, loop through userChoices to call each choice's corresponding function.
-	for (pair<int, int> choice : userChoices)	// for each int pair in the vector
+	for(pair<int, int> choice : userChoices)	// for each int pair in the vector
 	{
 		// retrieve hwNum and exNum from pair<int, int>
   		int hwNum = choice.first;
@@ -170,9 +170,9 @@ int main()
 
 		// same match-searching for loop logic from the previous while loop
 		bool choiceMatches = false;
-		for (int i = 0; i < numHws; i++)
+		for(int i = 0; i < numHws; i++)
 		{
-			if (HWExercises[i].homeworkNum == hwNum && HWExercises[i].exerciseNum == exNum)
+			if(HWExercises[i].homeworkNum == hwNum && HWExercises[i].exerciseNum == exNum)
 				{
 					cout << "NOW EXECUTING HW #" << hwNum << " EXERCISE #" << exNum << ":" << endl << endl;
 					HWExercises[i].fp();	// execute corresponding function using function ptr of the HWExercise struct at i
@@ -184,11 +184,11 @@ int main()
 					if((hwNum == 5 && exNum == 2) || (hwNum == 7 && exNum == 1))
 					{
 						cout << "NOW EXECUTING HW #" << hwNum << " EXERCISE #" << exNum << " *BONUS*:" << endl << endl;
-						if (hwNum == 5 && exNum == 2)
+						if(hwNum == 5 && exNum == 2)
 						{
 							hw5ex2_BONUS();	// bonus exercise is called directly, instead of bothering with a function ptr
 						}
-						else if (hwNum == 7 && exNum == 1)
+						else if(hwNum == 7 && exNum == 1)
 						{
 							hw7ex1_BONUS();
 						}
@@ -198,7 +198,7 @@ int main()
 						cin should be reset after each function call to ensure that future calls to cin 
 						in subsequently called functions will properly take user input. */
 						// This may require the user to press any key to execute the next part of main() after certain function calls (eg. 1-1 then 1-2).
-						if (cin.fail())
+						if(cin.fail())
 						{
 							cin.clear();
 							cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -209,7 +209,7 @@ int main()
 					break;
 				}
 		}
-		if (choiceMatches == false)
+		if(choiceMatches == false)
 		{
 			// if earlier user input validation has been correctly managed, then this error message should never be reached
 			cout << "ERROR: HW #" << hwNum << " Exercise #" << exNum << " does not exist." << endl;

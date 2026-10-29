@@ -48,7 +48,7 @@ const string IO_FILE_DIR = "data/";
 string getFilepath(string IOfileName)
 {
 	// compare given file name with the substring of IO_FILE_DIR to check if IO_FILE_DIR is present; if not, prepend it
-	if (IOfileName.compare(0, IO_FILE_DIR.length(), IO_FILE_DIR) != 0)
+	if(IOfileName.compare(0, IO_FILE_DIR.length(), IO_FILE_DIR) != 0)
 	{
 		IOfileName = IO_FILE_DIR + IOfileName;
 	}
@@ -320,19 +320,19 @@ void hw5ex1()
 	cout << "Please enter the number of seconds: ";
 	cin >> numSeconds;
 
-	if (numSeconds < 60)	// seconds < 60: seconds
+	if(numSeconds < 60)	// seconds < 60: seconds
 	{
 		cout << numSeconds << " seconds is " << numSeconds << " seconds." << endl;
 	}
-	else if (numSeconds >= 60 && numSeconds < 3600)		// 60 <= seconds < 3600:  minutes
+	else if(numSeconds >= 60 && numSeconds < 3600)		// 60 <= seconds < 3600:  minutes
 	{
 		cout << numSeconds << " seconds is " << numSeconds / 60 << " minutes." << endl;
 	}
-	else if (numSeconds >= 3600 && numSeconds < 86400)	// 3600 <= seconds  < 86400: hours
+	else if(numSeconds >= 3600 && numSeconds < 86400)	// 3600 <= seconds  < 86400: hours
 	{
 		cout << numSeconds << " seconds is " << numSeconds / 3600 << " hours." << endl;
 	}
-	else if (numSeconds >= 86400)						// seconds >= 86400: days
+	else if(numSeconds >= 86400)						// seconds >= 86400: days
 	{
 		cout << numSeconds << " seconds is " << numSeconds / 86400 << " days." << endl;
 	}
@@ -357,7 +357,7 @@ void hw5ex2()
 	cin >> packageName;
 
 	// if the package name is valid, then everything else can execute
-	if (packageName == 'A' || packageName == 'a' ||
+	if(packageName == 'A' || packageName == 'a' ||
 		packageName == 'B' || packageName == 'b' ||
 		packageName == 'C' || packageName == 'c')
 	{
@@ -366,11 +366,11 @@ void hw5ex2()
 		cin >> numMinutes;
 
 		// calculations for if the user's package is A
-		if (packageName == 'A' || packageName == 'a')
+		if(packageName == 'A' || packageName == 'a')
 		{
 			baseAmt = 39.99;
 			additionalMin = numMinutes - 450;
-			if (additionalMin > 0)
+			if(additionalMin > 0)
 			{
 				additionalAmt = additionalMin * 0.45;
 			}
@@ -378,11 +378,11 @@ void hw5ex2()
 			cout << "Your monthly bill is $" << totalAmt << endl;
 		}
 		// calculations for if the user's package is B
-		else if (packageName == 'B' || packageName == 'b')
+		else if(packageName == 'B' || packageName == 'b')
 		{
 			baseAmt = 59.99;
 			additionalMin = numMinutes - 900;
-			if (additionalMin > 0)
+			if(additionalMin > 0)
 			{
 				additionalAmt = additionalMin * 0.40;
 			}
@@ -390,7 +390,7 @@ void hw5ex2()
 			cout << "Your monthly bill is $" << totalAmt << endl;
 		}
 		// calculations for if the user's package is C
-		else if (packageName == 'C' || packageName == 'c')
+		else if(packageName == 'C' || packageName == 'c')
 		{
 			baseAmt = 69.99;
 			totalAmt = baseAmt + additionalAmt;
@@ -429,7 +429,7 @@ void hw5ex2_BONUS()
 	cin >> packageName;
 
 
-	if (packageName == 'A' || packageName == 'a' ||
+	if(packageName == 'A' || packageName == 'a' ||
 		packageName == 'B' || packageName == 'b' ||
 		packageName == 'C' || packageName == 'c')
 	{
@@ -441,12 +441,12 @@ void hw5ex2_BONUS()
 		{
 			baseAmt = 39.99;
 			additionalMin = numMinutes - 450;
-			if (additionalMin > 0)
+			if(additionalMin > 0)
 			{
 				additionalAmt = additionalMin * 0.45;
 			}
 			totalAmtA = baseAmt + additionalAmt;
-			if (totalAmtA < leastAmt)
+			if(totalAmtA < leastAmt)
 			{
 				leastAmt = totalAmtA;
 				leastPackage = 'A';
@@ -458,12 +458,12 @@ void hw5ex2_BONUS()
 			baseAmt = 59.99;
 			additionalMin = numMinutes - 900;
 			additionalAmt = 0;
-			if (additionalMin > 0)
+			if(additionalMin > 0)
 			{
 				additionalAmt = additionalMin * 0.40;
 			}
 			totalAmtB = baseAmt + additionalAmt;
-			if (totalAmtB < leastAmt)
+			if(totalAmtB < leastAmt)
 			{
 				leastAmt = totalAmtB;
 				leastPackage = 'B';
@@ -475,18 +475,18 @@ void hw5ex2_BONUS()
 			additionalAmt = 0;
 			baseAmt = 69.99;
 			totalAmtC = baseAmt + additionalAmt;
-			if (totalAmtC < leastAmt)
+			if(totalAmtC < leastAmt)
 			{
 				leastAmt = totalAmtC;
 				leastPackage = 'C';
 			}
 		}
 
-		if (packageName == 'A' || packageName == 'a')
+		if(packageName == 'A' || packageName == 'a')
 		{
 			totalAmt = totalAmtA;
 		}
-		else if (packageName == 'B' || packageName == 'b')
+		else if(packageName == 'B' || packageName == 'b')
 		{
 			totalAmt = totalAmtB;
 		}
@@ -494,7 +494,7 @@ void hw5ex2_BONUS()
 			totalAmt = totalAmtC;
 
 		cout << "Your monthly bill is $" << totalAmt << endl;
-		if (packageName == leastPackage || packageName == leastPackage + 32)
+		if(packageName == leastPackage || packageName == leastPackage + 32)
 		{
 			cout << "Congratulations! You chose the best package." << endl;
 		}
@@ -524,11 +524,11 @@ void hw6ex1()
 	cout << "The even integers between 2 and 100:" << endl;
 	int i = 0;	// the counter that controls line breaks in the following loops
 	int even;	// even integers between 2 and 100
-	for (even = 2; even <= 100; even +=2)
+	for(even = 2; even <= 100; even +=2)
 	{
 		cout << setw(5) << even << " ";
 		i++;
-		if (i == 10)
+		if(i == 10)
 		{
 			cout << endl;
 			i = 0;
@@ -546,12 +546,12 @@ void hw6ex1()
 		cout << setw(5) << triple << " ";
 		triple -= 3;
 		i++;
-		if (i == 10)
+		if(i == 10)
 		{
 			cout << endl;
 			i = 0;
 		}
-	} while (triple >= 3);
+	} while(triple >= 3);
 
 	cout << endl << endl;
 
@@ -559,12 +559,12 @@ void hw6ex1()
 	cout << "The powers of 2 between 2 and 2^20:" << endl;
 	i = 0;
 	int baseTwo = 2;	// the base (starting at 2) that gets multiplied by itself with every iteration
-	while (baseTwo <= 1048576)
+	while(baseTwo <= 1048576)
 	{
 		cout << setw(10) << baseTwo;
 		baseTwo = baseTwo * 2;
 		i++;
-		if (i == 8)
+		if(i == 8)
 		{
 			cout << endl;
 			i = 0;
@@ -577,12 +577,12 @@ void hw6ex1()
 	cout << "The powers of 2, starting from 2^20 down to 2:" << endl;
 	i = 0;
 	baseTwo = 1048576;	// the base (starting at 2^20) that gets multiplied by itself with every iteration
-	while (baseTwo >= 2)
+	while(baseTwo >= 2)
 	{
 		cout << setw(10) << baseTwo;
 		baseTwo = baseTwo / 2;
 		i++;
-		if (i == 8)
+		if(i == 8)
 		{
 			cout << endl;
 			i = 0;
@@ -598,7 +598,7 @@ void hw6ex1()
 	cout << "Please input a number: " << endl;
 	cin >> val;
 
-	for (i = 0; i <= val; i++)
+	for(i = 0; i <= val; i++)
 	{
 		sum = sum + i;
 	}
@@ -618,7 +618,7 @@ void hw6ex2()
 	int sales1;	// today's sales for store 1
 	cout << "Enter today's sales for store 1: ";
 	cin >> sales1;
-	while (sales1 < 0)
+	while(sales1 < 0)
 	{
 		cout << "Please enter a nonnegative sales for store 1: ";
 		cin >> sales1;
@@ -627,7 +627,7 @@ void hw6ex2()
 	int sales2;	// today's sales for store 2
 	cout << "Enter today's sales for store 2: ";
 	cin >> sales2;
-	while (sales2 < 0)
+	while(sales2 < 0)
 	{
 		cout << "Please enter a nonnegative sales for store 2: ";
 		cin >> sales2;
@@ -636,7 +636,7 @@ void hw6ex2()
 	int sales3;	// today's sales for store 3
 	cout << "Enter today's sales for store 3: ";
 	cin >> sales3;
-	while (sales3 < 0)
+	while(sales3 < 0)
 	{
 		cout << "Please enter a nonnegative sales for store 3: ";
 		cin >> sales3;
@@ -645,7 +645,7 @@ void hw6ex2()
 	int sales4;	// today's sales for store 4
 	cout << "Enter today's sales for store 4: ";
 	cin >> sales4;
-	while (sales4 < 0)
+	while(sales4 < 0)
 	{
 		cout << "Please enter a nonnegative sales for store 4: ";
 		cin >> sales4;
@@ -654,7 +654,7 @@ void hw6ex2()
 	int sales5;	// today's sales for store 5
 	cout << "Enter today's sales for store 5: ";
 	cin >> sales5;
-	while (sales5 < 0)
+	while(sales5 < 0)
 	{
 		cout << "Please enter a nonnegative sales for store 5: ";
 		cin >> sales5;
@@ -665,10 +665,10 @@ void hw6ex2()
 	int i;							// counts through the number of asterisks
 	int numAsterisk = sales1 / 100;	// number of required asterisks for each store
 	cout << "Store 1: ";
-	for (i = 1; i <= numAsterisk; i++)
+	for(i = 1; i <= numAsterisk; i++)
 	{
 		cout << "*";
-		if (i == numAsterisk)
+		if(i == numAsterisk)
 		{
 			cout << endl;
 		}
@@ -677,10 +677,10 @@ void hw6ex2()
 	i = 0;
 	numAsterisk = sales2 / 100;
 	cout << "Store 2: ";
-	for (i = 1; i <= numAsterisk; i++)
+	for(i = 1; i <= numAsterisk; i++)
 	{
 		cout << "*";
-		if (i == numAsterisk)
+		if(i == numAsterisk)
 		{
 			cout << endl;
 		}
@@ -689,10 +689,10 @@ void hw6ex2()
 	i = 0;
 	numAsterisk = sales3 / 100;
 	cout << "Store 3: ";
-	for (i = 1; i <= numAsterisk; i++)
+	for(i = 1; i <= numAsterisk; i++)
 	{
 		cout << "*";
-		if (i == numAsterisk)
+		if(i == numAsterisk)
 		{
 			cout << endl;
 		}
@@ -701,10 +701,10 @@ void hw6ex2()
 	i = 0;
 	numAsterisk = sales4 / 100;
 	cout << "Store 4: ";
-	for (i = 1; i <= numAsterisk; i++)
+	for(i = 1; i <= numAsterisk; i++)
 	{
 		cout << "*";
-		if (i == numAsterisk)
+		if(i == numAsterisk)
 		{
 			cout << endl;
 		}
@@ -713,10 +713,10 @@ void hw6ex2()
 	i = 0;
 	numAsterisk = sales5 / 100;
 	cout << "Store 5: ";
-	for (i = 1; i <= numAsterisk; i++)
+	for(i = 1; i <= numAsterisk; i++)
 	{
 		cout << "*";
-		if (i == numAsterisk)
+		if(i == numAsterisk)
 		{
 			cout << endl;
 		}
@@ -733,7 +733,7 @@ void hw7ex1()
 	cout << "Please enter an integer between 1 and 15: ";
 	cin >> val;
 
-	while (val < 1 || val > 15)
+	while(val < 1 || val > 15)
 	{
 		cout << "Please reenter an integer between 1 and 15: ";
 		cin >> val;
@@ -744,9 +744,9 @@ void hw7ex1()
 	int col = 1;	// tracks how many total columns have printed
 	int row = 1;	// tracks how many total rows have printed
 
-	while (row <= val)
+	while(row <= val)
 	{
-		while (col <= val - (row - 1))
+		while(col <= val - (row - 1))
 		{
 			cout << "*";
 			col++;
@@ -762,14 +762,14 @@ void hw7ex1()
 	row = 1;
 	col = 1;
 
-	while (row <= val)
+	while(row <= val)
 	{
-		while (col <= row - 1)
+		while(col <= row - 1)
 		{
 			cout << " ";
 			col++;
 		}
-		while (col <= val)
+		while(col <= val)
 		{
 			cout << "*";
 			col++;
@@ -786,17 +786,17 @@ void hw7ex1()
 	col = 1;
 	int numStar;	// number of columns with stars printed per row
 
-	while (row <= val)
+	while(row <= val)
 	{
 		numStar = (row - 1) + 1 + (row - 1);
 
-		while (col <= val - row)
+		while(col <= val - row)
 		{
 			cout << " ";
 			col++;
 		}
 		col = 1;
-		while (col <= numStar)
+		while(col <= numStar)
 		{
 			cout << "*";
 			col++;
@@ -814,25 +814,25 @@ void hw7ex1()
 	col = 1;
 	numStar = 0;
 
-	while (row <= val)
+	while(row <= val)
 	{
 		numStar = (row - 1) + 1 + (row - 1);
 
-		while (col <= val - row)
+		while(col <= val - row)
 		{
 			cout << " ";
 			col++;
 		}
 		col = 1;
-		while (col <= numStar)
+		while(col <= numStar)
 		{
-			if (col == 1 || col == numStar)
+			if(col == 1 || col == numStar)
 			{
 				cout << "*";
 			}
 			else
 			{
-			if (row == val)
+			if(row == val)
 			{
 				cout << "*";
 			}
@@ -861,7 +861,7 @@ void hw7ex1_BONUS()
 	cout << "Please enter an odd integer between 1 and 15: ";
 	cin >> val;
 
-	while (val < 1 || val > 15 || val % 2 == 0)
+	while(val < 1 || val > 15 || val % 2 == 0)
 	{
 		cout << "Please reenter an odd integer between 1 and 15: ";
 		cin >> val;
@@ -874,25 +874,25 @@ void hw7ex1_BONUS()
 	int numStar = -1;		// number of columns with stars printed per row
 
 	// top triangle
-	while (row > 1)
+	while(row > 1)
 	{
 		numStar = (row - 1) + 1 + (row - 1);
 
-		while (col <= val - row)
+		while(col <= val - row)
 		{
 			cout << "  ";
 			col++;
 		}
 		col = 1;
-		while (col <= numStar)
+		while(col <= numStar)
 		{
-			if (col == 1 || col == numStar)
+			if(col == 1 || col == numStar)
 			{
 				cout << "* ";
 			}
 			else
 			{
-				if (row == val)
+				if(row == val)
 				{
 				cout << "* ";
 				}
@@ -910,25 +910,25 @@ void hw7ex1_BONUS()
 	}
 
 	// bottom triangle
-	while (row <= val)
+	while(row <= val)
 	{
 		numStar = (row - 1) + 1 + (row - 1);
 
-		while (col <= val - row)
+		while(col <= val - row)
 		{
 			cout << "  ";
 			col++;
 		}
 		col = 1;
-		while (col <= numStar)
+		while(col <= numStar)
 		{
-			if (col == 1 || col == numStar)
+			if(col == 1 || col == numStar)
 			{
 				cout << "* ";
 			}
 			else
 			{
-				if (row == val)
+				if(row == val)
 				{
 				cout << "* ";
 				}
@@ -973,29 +973,29 @@ void hw7ex2()
 	int secondMin;		// the second smallest number in the file
 
 	// the input file opened successfully
-	if (inputFile)
+	if(inputFile)
 	{
 		cout << "File \"" << inputFileName << "\" was opened" << endl << endl;
 
-		while (inputFile >> val)
+		while(inputFile >> val)
 		{
 			sum += val;
 			counter++;
-			if (val > max)
+			if(val > max)
 			{
 				secondMax = max;
 				max = val;
 				}
-			else if (val > secondMax && val < max)
+			else if(val > secondMax && val < max)
 			{
 				secondMax = val;
 			}
-			if (val < min)
+			if(val < min)
 			{
 				secondMin = min;
 				min = val;
 			}
-			else if (val < secondMin && val > min)
+			else if(val < secondMin && val > min)
 			{
 				secondMin = val;
 			}
@@ -1037,7 +1037,7 @@ void hw8ex1()
 	cin >> num;
 
 	// input validation loop
-	while (num > 100 || num < 1)
+	while(num > 100 || num < 1)
 	{
 		cout << "Please re-renter a number between 1 and 100: ";
 		cin >> num;
@@ -1053,7 +1053,7 @@ void hw8ex1()
 	outputFile.open(outputFileName);
 
 	// the output file was opened successfully
-	if (outputFile)
+	if(outputFile)
 	{
 		hw8ex1_displayOutput(num, outputFile);
 		outputFile.close();
@@ -1078,7 +1078,7 @@ bool hw8ex1_isPrime(int number)
 	bool isPrime = true;
 
 	// 1 is not considered a prime nor composite number
-	if (number == 1)
+	if(number == 1)
 	{
 		isPrime = false;
 	}
@@ -1086,10 +1086,10 @@ bool hw8ex1_isPrime(int number)
 	else
 	{
 		// create a counter 'i' and divide the number by i for every i up to the square root of that number
-		for (int i = 2; i <= sqrt(number); i++)
+		for(int i = 2; i <= sqrt(number); i++)
 		{
 			// if the number divides perfectly by any value of i, then the number is not prime
-			if (number % i == 0)
+			if(number % i == 0)
 			{
 				isPrime = false;
 				break; // once isPrime is set to false, no more iterations need to occur
@@ -1125,12 +1125,12 @@ void hw8ex1_displayOutput(int number, ofstream & outputFile)
 	outputFile << "The first " << number << " primes:" << endl;
 
 	// control loop for testing for primeness
-	while (testForPrime)
+	while(testForPrime)
 	{
 		testNum++;
 
 		// if the testNum is prime
-		if (hw8ex1_isPrime(testNum))
+		if(hw8ex1_isPrime(testNum))
 		{
 			// print this testNum to both the output console and output file
 			cout << setw(5) << testNum << " ";
@@ -1140,13 +1140,13 @@ void hw8ex1_displayOutput(int number, ofstream & outputFile)
 			primeCounter++;
 
 			// test for if the total user-inputted number of primes has been reached
-			if (primeCounter == number)
+			if(primeCounter == number)
 			{
 				testForPrime = false;
 			}
 
 			// print on a new line after every ten numbers printed
-			if (primeCounter % 10 == 0)
+			if(primeCounter % 10 == 0)
 			{
 				cout << endl;
 				outputFile << endl;
@@ -1154,7 +1154,7 @@ void hw8ex1_displayOutput(int number, ofstream & outputFile)
 			// print a line break once the user-inputted number of primes has been printed
 			else
 			{
-				if (testForPrime == false)
+				if(testForPrime == false)
 				{
 				cout << endl;
 				outputFile << endl;
@@ -1202,7 +1202,7 @@ void hw8ex2_getScore(int & score)
 	cout << "Enter a score between 0 and 100: ";
 	cin >> score;
 
-	while (score < 0 || score > 100)
+	while(score < 0 || score > 100)
 	{
 		cout << "Re-enter a valid score between 0 and 100: ";
 		cin >> score;
@@ -1220,23 +1220,23 @@ int hw8ex2_findLowest(int n1, int n2, int n3, int n4, int n5)
 {
 	// create the minimum and initialize it to a number too big to be the lowest score
 	int min = 101;
-	if (n1 < min)
+	if(n1 < min)
 	{
 		min = n1;
 	}
-	if (n2 < min)
+	if(n2 < min)
 	{
 		min = n2;
 	}
-	if (n3 < min)
+	if(n3 < min)
 	{
 		min = n3;
 	}
-	if (n4 < min)
+	if(n4 < min)
 	{
 		min = n4;
 	}
-	if (n5 < min)
+	if(n5 < min)
 	{
 		min = n5;
 	}
@@ -1307,11 +1307,11 @@ int hw9ex1_readArray(int stdList[], int maxElems, string inputFileName)
 	int currentElem = 0;
 
 	// the input file was successfully opened
-	if (inputFile)
+	if(inputFile)
 	{
 		// read data from the input file directly into the array, then close the file
 		currentElem = 0;
-		while (currentElem < maxElems && inputFile >> stdList[currentElem])
+		while(currentElem < maxElems && inputFile >> stdList[currentElem])
 		{
 			currentElem++;
 		}
@@ -1346,10 +1346,10 @@ int hw9ex1_searchList(int stdList[], int numElems, int value)
 
 	// index where the test value has been located at in the standard array
 	int matchIndex = -1;
-	for (int i = startIndex; i < numElems; i++)
+	for(int i = startIndex; i < numElems; i++)
 	{
 		// the match has been found at index i
-		if (stdList[i] == value)
+		if(stdList[i] == value)
 		{
 			matchIndex = i;		// set the index of the match to equal i
 			startIndex = i+1;	// set the new index to start searching from to equal i+1
@@ -1358,7 +1358,7 @@ int hw9ex1_searchList(int stdList[], int numElems, int value)
 	}
 
 	// the match was not found at all
-	if (matchIndex == -1)
+	if(matchIndex == -1)
 	{
 		startIndex = 0;			// set the new index to start searching from the first index again
 	}
@@ -1379,7 +1379,7 @@ void hw9ex1_searchManager(int LSStandard[], int standardElems, int LSTest[], int
 	int matchIndex = -1;		// index where the value was found
 	int numberOfMatches = 0;	// number of matches for the given value
 
-	for (int i = 0; i < testElems; i++)
+	for(int i = 0; i < testElems; i++)
 	{
 		// call the linear search on every value at i
 		value = LSTest[i];
@@ -1387,7 +1387,7 @@ void hw9ex1_searchManager(int LSStandard[], int standardElems, int LSTest[], int
 		numberOfMatches = 0;
 
 		// the test value was not found in the standard array
-		if (matchIndex == -1)
+		if(matchIndex == -1)
 		{
 			cout << "Number " << (i + 1) << " (" << setw(3) << value << ") was not located in the file." << endl;
 		}
@@ -1398,9 +1398,9 @@ void hw9ex1_searchManager(int LSStandard[], int standardElems, int LSTest[], int
 
 			numberOfMatches = 1;				// one match has been found at this point
 
-			while (matchIndex > -1)
+			while(matchIndex > -1)
 			{
-				if (numberOfMatches == 1)
+				if(numberOfMatches == 1)
 				{
 					cout << " " << matchIndex;	// for the first match, don't print a comma before it
 				}
@@ -1443,7 +1443,7 @@ void hw9ex2()
 	int correctResponseCount = -1;
 
 	// only call hw9ex2_readArray() on the correct answers if the call on the students' answers worked
-	if (studentResponseCount > 0)
+	if(studentResponseCount > 0)
 	{
 		// input the file with the correct answers
 		cout << "Please enter the name of the input file containing the correct answers: ";
@@ -1452,7 +1452,7 @@ void hw9ex2()
 	}
 
 	// only call hw9ex2_displayResults() on both arrays if both calls on hw9ex2_readArray() have worked
-	if (studentResponseCount > 0 && correctResponseCount > 0)
+	if(studentResponseCount > 0 && correctResponseCount > 0)
 	{
 		hw9ex2_displayResults(studentResponses, studentResponseCount, correctResponses, correctResponseCount);
 	}
@@ -1476,11 +1476,11 @@ int hw9ex2_readArray(char response[], int maxArraySize, string inputFileName)
 	int numElems = 0;
 
 	// the input file was successfully opened
-	if (inputFile)
+	if(inputFile)
 	{
 		// read data from the input file directly into the array, then close the file
 		numElems = 0;
-		while (numElems < maxArraySize && inputFile >> response[numElems])
+		while(numElems < maxArraySize && inputFile >> response[numElems])
 		{
 			numElems++;
 		}
@@ -1530,7 +1530,7 @@ void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char c
 	outputFile.open(outputFileName);
 
 	// looping through each student in the array of students' answers
-	for (int currentStudent = 0; currentStudent < numStudents; currentStudent++)
+	for(int currentStudent = 0; currentStudent < numStudents; currentStudent++)
 	{
 		// reinitialize the incorrect answers counter to 0
 		incorrectCounter = 0;
@@ -1540,13 +1540,13 @@ void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char c
 		outputFile << "Report for Student " << (currentStudent + 1) << ":" << endl << "---------------------" << endl;
 
 		// loop through each question in one student's set of answers
-		for (int currentQuestion = 0; currentQuestion < correctArraySize; currentQuestion++)
+		for(int currentQuestion = 0; currentQuestion < correctArraySize; currentQuestion++)
 		{
 			// calculate the index of the student's response
 			studentIndex = currentStudent * hw9ex2_CORRECT_RESP_ARRAY_SIZE + currentQuestion;
 
 			// the student's answer doesn't match the correct answer, meaning it is incorrect
-			if (studentResponses[studentIndex] != correctResponses[currentQuestion])
+			if(studentResponses[studentIndex] != correctResponses[currentQuestion])
 			{
 				// input this question's number and answers to the proper arrays, and increment the missed question counter
 				missedQuestionNumber[incorrectCounter] = currentQuestion;
@@ -1565,9 +1565,9 @@ void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char c
 		outputFile << "Questions missed:" << endl;
 
 		// properly output commas or spaces for the desired output (listing the incorrect questions)
-		for (int currentMissedQuestion = 0; currentMissedQuestion < incorrectCounter; currentMissedQuestion++)
+		for(int currentMissedQuestion = 0; currentMissedQuestion < incorrectCounter; currentMissedQuestion++)
 		{
-			if (currentMissedQuestion == 0)
+			if(currentMissedQuestion == 0)
 			{
 				cout << "  ";
 				outputFile << "  ";
@@ -1591,7 +1591,7 @@ void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char c
 		outputFile << endl;
 
 		// determine whether the student passed or failed the exam
-		if (studentGrades[currentStudent] >= 70.0)
+		if(studentGrades[currentStudent] >= 70.0)
 		{
 			cout << "This student passed the exam!" << endl;
 			outputFile << "This student passed the exam!" << endl;
@@ -1634,9 +1634,9 @@ double hw9ex2_smallestValue(double values[], int numValues, int & indexForMin)
 	double min = values[0];
 	indexForMin = 0;
 
-	for (int currentElem = 1; currentElem < numValues; currentElem++)
+	for(int currentElem = 1; currentElem < numValues; currentElem++)
 	{
-		if (values[currentElem] < min)
+		if(values[currentElem] < min)
 		{
 			min = values[currentElem];
 			indexForMin = currentElem;
@@ -1658,9 +1658,9 @@ double hw9ex2_largestValue(double values[], int numValues, int & indexForMax)
 	double max = values[0];
 	indexForMax = 0;
 
-	for (int currentElem = 1; currentElem < numValues; currentElem++)
+	for(int currentElem = 1; currentElem < numValues; currentElem++)
 	{
-		if (values[currentElem] > max)
+		if(values[currentElem] > max)
 		{
 			max = values[currentElem];
 			indexForMax = currentElem;

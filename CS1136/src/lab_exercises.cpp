@@ -59,7 +59,7 @@ const string IO_FILE_DIR = "data/";
 string getFilepath(string IOfileName)
 {
 	// compare given file name with the substring of IO_FILE_DIR to check if IO_FILE_DIR is present; if not, prepend it
-	if (IOfileName.compare(0, IO_FILE_DIR.length(), IO_FILE_DIR) != 0)
+	if(IOfileName.compare(0, IO_FILE_DIR.length(), IO_FILE_DIR) != 0)
 	{
 		IOfileName = IO_FILE_DIR + IOfileName;
 	}
@@ -247,12 +247,12 @@ void lab4ex1()
 	cout << "Please enter the mass of an object in kilograms: ";
 	cin >> objMass;
 
-	if (objMass <= 0)		// scenario if object's mass invalid (less than or equal to zero)
+	if(objMass <= 0)		// scenario if object's mass invalid (less than or equal to zero)
 	{
 		cout << "The mass is " << objMass << " kg" << endl;
 		cout << "The mass must be greater than zero kg" << endl;
 	}
-	else if (objMass > 0)	// scenario if object's mass is valid (greater than zero)
+	else if(objMass > 0)	// scenario if object's mass is valid (greater than zero)
 	{
 		const double accelEarth = 9.81;		// 9.81 meters per second squared = acceleration due to gravity on Earth
 		const double accelMoon = 1.62;		// 1.62 meters per second squared = acceleration due to gravity on the Moon
@@ -272,11 +272,11 @@ void lab4ex1()
 		cout << setw(8) << left << "Venus " << setw(14) << right << weightVenus
 			<< endl;
 
-		if (weightEarth >= 1500)			// notes the object as heavy if its weight on Earth is >= 1500
+		if(weightEarth >= 1500)			// notes the object as heavy if its weight on Earth is >= 1500
 		{
 			cout << "This object is heavy." << endl;
 		}
-		else if (weightEarth < 5)			// notes the object as light if its weight on Earth is < 5
+		else if(weightEarth < 5)			// notes the object as light if its weight on Earth is < 5
 		{
 			cout << "This object is light." << endl;
 		}
@@ -299,33 +299,33 @@ void lab4ex2()
 	cin >> numSeconds;
 	cout << numSeconds << " seconds is equivalent to:" << endl;
 	
-	if (numSeconds <= 0)								// the inputted amount is invalid (zero or less)
+	if(numSeconds <= 0)								// the inputted amount is invalid (zero or less)
 	{
 		cout << "Total seconds must be greater than zero" << endl;
 	}
 
 	long long int numDays = numSeconds / 60/ 60/ 24;	// the number of days within these seconds
-	if (numDays > 0)									// prints only if it's greater than zero
+	if(numDays > 0)									// prints only if it's greater than zero
 	{
 		cout << numDays << " day(s)" << endl;
 	}
 	
 	numSeconds = numSeconds - numDays * 60 * 60 * 24;	// update the number of seconds to exclude the days within it
 	long long int numHrs = numSeconds / 60 / 60;		// the number of hours within these seconds
-	if (numHrs > 0)										// prints only if it's greater than zero
+	if(numHrs > 0)										// prints only if it's greater than zero
 	{
 		cout << numHrs << " hour(s)" << endl;
 	}
 
 	numSeconds = numSeconds - numHrs * 60 * 60;			// update the number of seconds to exclude the days + hrs within it
 	long long int numMins = numSeconds / 60;			// the number of minutes within these seconds
-	if (numMins > 0)									// prints only if it's greater than zero
+	if(numMins > 0)									// prints only if it's greater than zero
 	{
 		cout << numMins << " minute(s)" << endl;
 	}
 
 	numSeconds = numSeconds - numMins * 60;				// update the number of seconds to exclude days + hrs + mins
-	if (numSeconds > 0)									// all that remains is the seconds; prints only if it's greater than zero
+	if(numSeconds > 0)									// all that remains is the seconds; prints only if it's greater than zero
 	{
 		cout << numSeconds << " second(s)" << endl;
 	}
@@ -348,11 +348,11 @@ void lab5ex1()
 	cout << "1 Air" << endl << "2 Water" << endl << "3 Steel" << endl;
 	cin >> medium;			// user inputs their choice of 1, 2, or 3
 
-	switch (medium)
+	switch(medium)
 	{
 	case 1: cout << "Enter distance (in feet)" << endl;
 		cin >> distance;
-		if (distance <= 0)
+		if(distance <= 0)
 		{
 			cout << "The distance must be greater than zero" << endl;
 		}
@@ -365,7 +365,7 @@ void lab5ex1()
 		break;
 	case 2: cout << "Enter distance (in feet)" << endl;
 		cin >> distance;
-		if (distance <= 0)
+		if(distance <= 0)
 		{
 			cout << "The distance must be greater than zero" << endl;
 		}
@@ -378,7 +378,7 @@ void lab5ex1()
 		break;
 	case 3: cout << "Enter distance (in feet)" << endl;
 		cin >> distance;
-		if (distance <= 0)
+		if(distance <= 0)
 		{
 			cout << "The distance must be greater than zero" << endl;
 		}
@@ -408,15 +408,15 @@ void lab5ex2()
 	cout << "1 Carbon Dioxide" << endl << "2 Air" << endl << "3 Helium" << endl << "4 Hydrogen" << endl;
 	cin >> medium;
 
-	if (medium == 0 || medium > 4)
+	if(medium == 0 || medium > 4)
 	{
 		cout << "The menu value is invalid. Please run the program again." << endl;
 	}
-	else if (medium == 1)
+	else if(medium == 1)
 	{
 		cout << "Enter time (in seconds)" << endl;
 		cin >> seconds;
-		if (seconds < 0 || seconds > 30)
+		if(seconds < 0 || seconds > 30)
 		{
 			cout << "The time must be between 0.00 and 30.00 (inclusive)" << endl;
 		}
@@ -427,11 +427,11 @@ void lab5ex2()
 			cout << fixed << setprecision(3) << "Traveled " << distance << " meters" << endl;
 		}
 	}
-	else if (medium == 2)
+	else if(medium == 2)
 	{
 		cout << "Enter time (in seconds)" << endl;
 		cin >> seconds;
-		if (seconds < 0 || seconds > 30)
+		if(seconds < 0 || seconds > 30)
 		{
 			cout << "The time must be between 0.00 and 30.00 (inclusive)" << endl;
 		}
@@ -442,11 +442,11 @@ void lab5ex2()
 			cout << fixed << setprecision(3) << "Traveled " << distance << " meters" << endl;
 		}
 	}
-	else if (medium == 3)
+	else if(medium == 3)
 	{
 		cout << "Enter time (in seconds)" << endl;
 		cin >> seconds;
-		if (seconds < 0 || seconds > 30)
+		if(seconds < 0 || seconds > 30)
 		{
 			cout << "The time must be between 0.00 and 30.00 (inclusive)" << endl;
 		}
@@ -461,7 +461,7 @@ void lab5ex2()
 	{
 		cout << "Enter time (in seconds)" << endl;
 		cin >> seconds;
-		if (seconds < 0 || seconds > 30)
+		if(seconds < 0 || seconds > 30)
 		{
 			cout << "The time must be between 0.00 and 30.00 (inclusive)" << endl;
 		}
@@ -488,7 +488,7 @@ void lab6ex1()
 	cin >> lowerVal >> upperVal;
 	
 	//while-loop for input validation, checks that both vals are within [32, 126] and in ascending order
-	while (lowerVal < 32 || upperVal < 32 || lowerVal > 126 || upperVal > 126 || lowerVal > upperVal)
+	while(lowerVal < 32 || upperVal < 32 || lowerVal > 126 || upperVal > 126 || lowerVal > upperVal)
 	{
 		cout << "ERROR: Values must be in range 32 to 126 inclusive." << endl;
 		cout << "Please enter lower and upper ASCII values:" << endl;
@@ -505,13 +505,13 @@ void lab6ex1()
 	unsigned int counter = 0;     // counter to check if 16 characters has been reached in each line
 
 	// for-loop that loops through the characters within the user-specified range
-	for (i = lowerVal; i <= upperVal; i++)
+	for(i = lowerVal; i <= upperVal; i++)
 	{
 		cout << lower++;
 		counter++;
 
 		// if-block that checks if a new line must be created
-		if (counter == 16 && i != upperVal)
+		if(counter == 16 && i != upperVal)
 		{
 			cout << endl;
 			counter = 0;
@@ -539,7 +539,7 @@ void lab6ex2()
 	cin >> incrementVal;
 
 	// while-loop to validate user input
-	while (startingVal > endingVal || incrementVal <= 0)
+	while(startingVal > endingVal || incrementVal <= 0)
 	{
 		cout << "Starting temperature must be <= ending temperature and increment must be > 0.0" << endl;
 		cin >> startingVal;
@@ -583,7 +583,7 @@ void lab7ex1()
 	string strX;					// string that displays the X's in the form of a bar chart
 
 	// the input file opened successfully
-	if (inputFile)
+	if(inputFile)
 	{
 		// creates the output file for bar chart
 		ofstream outputFile;
@@ -595,33 +595,33 @@ void lab7ex1()
 		outputFile.open(outputFileName);
 
 		// the output file opened successfully 
-		if (outputFile)
+		if(outputFile)
 		{
 			// processes the values in the input file
-			while (inputFile >> storeNum >> salesAmt)
+			while(inputFile >> storeNum >> salesAmt)
 			{
 				validInput = true;  // initialize the validity check to true
 
 				// checks that storeNum is within the range [1, 99]; if not, the validity check is false
-				if (storeNum < 1 || storeNum > 99)
+				if(storeNum < 1 || storeNum > 99)
 				{
 					cout << "The store number " << storeNum << " is not valid" << endl;
 					validInput = false;
 				}
 				// checks that salesAmt is positive; if not, the validity check is false
-				if (salesAmt < 0)
+				if(salesAmt < 0)
 				{
 					cout << "The sales value for store " << storeNum << " is negative" << endl;
 					validInput = false;
 				}
 
 				// if the validity check is true, meaning the previous two validity tests were passed
-				if (validInput == true)
+				if(validInput == true)
 				{
 					validRecordCounter++;
 
 					// begins writing into the output file
-					if (validRecordCounter == 1)
+					if(validRecordCounter == 1)
 					{
 						outputFile << "SALES BAR CHART" << endl << "(Each X equals 1,000 dollars)" << endl;
 					}
@@ -671,7 +671,7 @@ void lab7ex2()
 	double sum = 0;					// sum of the values in the input file
 
 	// the input file opened successfully
-	if (inputFile)
+	if(inputFile)
 	{
 		// creates the output file for invalid values
 		ofstream outputFile;
@@ -685,15 +685,15 @@ void lab7ex2()
 		cout << "Reading from file \"" << inputFileName << "\"" << endl;
 
 		// the output file opened successfully 
-		if (outputFile)
+		if(outputFile)
 		{
 			// processes the values in the input file
-			while (inputFile >> value)
+			while(inputFile >> value)
 			{
 				outputFile << fixed << setprecision(4);
 				
 				// checks for invalid values in the input file and updates the corresponding counter
-				if (value < 0 || value > 110)
+				if(value < 0 || value > 110)
 				{
 				outputFile << value << endl;
 				invalidRecordCounter++;
@@ -709,7 +709,7 @@ void lab7ex2()
 			cout << "Total values: " << (validRecordCounter + invalidRecordCounter) << endl;
 			cout << "Invalid values: " << invalidRecordCounter << endl;
 			cout << "Valid values: " << validRecordCounter << endl;
-			if (validRecordCounter >= 1)
+			if(validRecordCounter >= 1)
 			{
 				cout << "Average of valid values: " << fixed << setprecision(3) << avg << endl;
 			}
@@ -751,16 +751,16 @@ void lab8ex1()
 	bool keepRunning = true;	// checks whether the program should continue or terminate
 
 	// uses keepRunning to continue the program for valid input
-	while (keepRunning)
+	while(keepRunning)
 	{
 		// condition for the first function to occur
-		while (seconds < 0)
+		while(seconds < 0)
 		{
 			seconds = lab8ex1_readSeconds();
 		}
 
 		// condition for the second and third function to occur
-		if (seconds > 0)
+		if(seconds > 0)
 		{
 			distance = lab8ex1_calculateDistance(seconds);
 			lab8ex1_displayResults(seconds, distance);
@@ -784,7 +784,7 @@ double lab8ex1_readSeconds()
 	cout << "Please enter the time (in seconds), or enter 0 or any non-number character(s) to exit:" << endl;
 	cin >> seconds;
 
-	if (seconds < 0)
+	if(seconds < 0)
 	{
 		cout << "ERROR: The time must be zero or more." << endl;
 	}
@@ -848,7 +848,7 @@ double lab8ex2_readFutureValue()
 	cout << "Please enter the desired future value for your bank account:" << endl;
 	cin >> futureValue;
 
-	while (futureValue == 0 || futureValue < 0)
+	while(futureValue == 0 || futureValue < 0)
 	{
 		cout << "ERROR: The future value must be greater than zero." << endl;
 		cout << "Please enter the desired future value for your bank account:" << endl;
@@ -871,7 +871,7 @@ double lab8ex2_readAnnualRate()
 	cout << "Please enter the annual interest rate:" << endl;
 	cin >> interestRate;
 
-	while (interestRate == 0 || interestRate < 0)
+	while(interestRate == 0 || interestRate < 0)
 	{
 		cout << "ERROR: The annual interest rate must be greater than zero." << endl;
 		cout << "Please enter the annual interest rate:" << endl;
@@ -893,7 +893,7 @@ int lab8ex2_readYears()
 	cout << "Please enter number of years to accumulate interest:" << endl;
 	cin >> numYears;
 
-	while (numYears == 0 || numYears < 0)
+	while(numYears == 0 || numYears < 0)
 	{
 		cout << "ERROR: The number of years must be greater than zero." << endl;
 		cout << "Please enter number of years to accumulate interest:" << endl;
@@ -969,7 +969,7 @@ void lab9ex1_getInputs(int & intSpoolsOrdered, int & intSpoolsInStock, double & 
 {
 	cout << "Please enter the number of spools to be ordered:" << endl;
 	cin >> intSpoolsOrdered;
-	while (intSpoolsOrdered < 1)
+	while(intSpoolsOrdered < 1)
 	{
 		cout << "ERROR: Number of spools ordered must be 1 or more." << endl;
 		cout << "Please enter the number of spools to be ordered:" << endl;
@@ -978,7 +978,7 @@ void lab9ex1_getInputs(int & intSpoolsOrdered, int & intSpoolsInStock, double & 
 
 	cout << "Please enter the number of spools in stock:" << endl;
 	cin >> intSpoolsInStock;
-	while (intSpoolsInStock < 0)
+	while(intSpoolsInStock < 0)
 	{
 		cout << "ERROR: Spools in stock must be 0 or more." << endl;
 		cout << "Please enter the number of spools in stock:" << endl;
@@ -988,11 +988,11 @@ void lab9ex1_getInputs(int & intSpoolsOrdered, int & intSpoolsInStock, double & 
 	char yesNo = 'n';	// the user's "yes" or "no" to input their own shipping/handling charge
 	cout << "Special shipping and handling? (y or n)" << endl;
 	cin >> yesNo;
-	if (yesNo == 'y')
+	if(yesNo == 'y')
 	{
 		cout << "Please enter the shipping and handling amount:" << endl;
 		cin >> shippingAndHandlingCharges;
-		while (shippingAndHandlingCharges < 0.0)
+		while(shippingAndHandlingCharges < 0.0)
 		{
 			cout << "ERROR: The spool shipping and handling charge must be 0.0 or more." << endl;
 			cout << "Please enter the shipping and handling amount:" << endl;
@@ -1018,7 +1018,7 @@ void lab9ex1_displayOutput(int intSpoolsOrdered, int intSpoolsInStock, double sh
 	int intSpoolsReady = -1;		// the number of spools ready to ship
 	int intSpoolsBackorder = 0;		// the number of spools in back-order (if any)
 
-	if (intSpoolsOrdered <= intSpoolsInStock)
+	if(intSpoolsOrdered <= intSpoolsInStock)
 	{
 		intSpoolsReady = intSpoolsOrdered;
 	}
@@ -1064,7 +1064,7 @@ void lab9ex2()
 	bool writeHeader = true;	// the control variable for lab9ex2_writeOutput() to write headers to the output file only once
 
 	// the input file was successfully opened
-	if (inputFile)
+	if(inputFile)
 	{
 		// creates the output file for the calculated report
 		ofstream outputFile;
@@ -1076,7 +1076,7 @@ void lab9ex2()
 		outputFile.open(outputFileName);
 
 		// the output file opened successfully 
-		if (outputFile)
+		if(outputFile)
 		{
 			double presentValue = 0.0;				// the present value for the investment
 			double monthlyInterestRate = 0.0;		// the monthly interest rate on the investment
@@ -1091,13 +1091,13 @@ void lab9ex2()
 
 			/* when getInput's return value is not 0, so the end of the input file has not been reached
 			(and therefore the assignment must continue executing its functions) */
-			while (returnValue > 0)
+			while(returnValue > 0)
 			{
 				returnValue = lab9ex2_getInput(inputFile, presentValue, monthlyInterestRate, numMonths);
 				monthlyRateDecimal = monthlyInterestRate / 100.0;
 
 				// when valid input values have been read in from the input file
-				if (returnValue == 1)
+				if(returnValue == 1)
 				{
 					futureValue = lab9ex2_calculateFutureValue(presentValue, monthlyRateDecimal, numMonths);
 					lab9ex2_writeOutput(outputFile, futureValue, presentValue, monthlyInterestRate, numMonths, writeHeader);
@@ -1136,13 +1136,13 @@ unsigned int lab9ex2_getInput(ifstream & inputFile, double & presentValue, doubl
 	unsigned int returnValue = 2;
 
 	// the input file was opened successfully
-	if (inputFile)
+	if(inputFile)
 	{
 		// there are values in the file to be read in
-		if (inputFile >> presentValue >> monthlyInterestRate >> numMonths)
+		if(inputFile >> presentValue >> monthlyInterestRate >> numMonths)
 		{
 			// input-validation check to set the function's return value to 1, meaning the inputs are all valid
-			if (presentValue > 0 && monthlyInterestRate > 0 && numMonths > 0)
+			if(presentValue > 0 && monthlyInterestRate > 0 && numMonths > 0)
 			{
 				returnValue = 1;
 			}
@@ -1195,7 +1195,7 @@ double lab9ex2_calculateFutureValue(double presentValue, double interestRate, in
 	Return:				None. */
 void lab9ex2_writeOutput(ofstream & outputFile, double & futureValue, double & presentValue, double & monthlyInterestRate, int & numMonths, bool & writeHeader)
 {
-	if (writeHeader)
+	if(writeHeader)
 	{
 		outputFile << "Future Value\tPresent Value\tMonthly Interest\tMonths" << endl;
 		writeHeader = false;
@@ -1233,7 +1233,7 @@ void lab10ex1()
 	bool correctReadStatus = false;
 
 	// only call lab10ex1_readArray() on the correct answers if the call on the student's answers worked
-	if (studentReadStatus)
+	if(studentReadStatus)
 	{
 		// input the file with the correct answers
 		cout << "Please enter the name of the input file containing the correct answers: ";
@@ -1243,7 +1243,7 @@ void lab10ex1()
 	}
 	
 	// only call lab10ex1_displayResults() on both arrays if both calls on lab10ex1_readArray() have worked
-	if (studentReadStatus && correctReadStatus)
+	if(studentReadStatus && correctReadStatus)
 	{
 		lab10ex1_displayResults(studentResponses, correctResponses);
 	}
@@ -1264,18 +1264,18 @@ bool lab10ex1_readArray(char response[lab10ex1_ARRAY_SIZE], string inputFileName
 	inputFile.open(inputFileName);
 
 	// the input file was successfully opened
-	if (inputFile)
+	if(inputFile)
 	{
 		// read data from the input file directly into the array, then close the file
 		int i = 0;
-		while (i < lab10ex1_ARRAY_SIZE && inputFile >> response[i])
+		while(i < lab10ex1_ARRAY_SIZE && inputFile >> response[i])
 		{
 			i++;
 		}
 		inputFile.close();
 
 		// if the read was successful, return true
-		if (i == lab10ex1_ARRAY_SIZE)
+		if(i == lab10ex1_ARRAY_SIZE)
 		{
 			return true;
 		}
@@ -1308,9 +1308,9 @@ void lab10ex1_displayResults(char studentResponses[lab10ex1_ARRAY_SIZE], char co
 	int incorrectCounter = 0;
 
 	// loop through the array and output a statement for any incorrect answers
-	for (int i = 0; i < lab10ex1_ARRAY_SIZE; i++)
+	for(int i = 0; i < lab10ex1_ARRAY_SIZE; i++)
 	{
-		if (studentResponses[i] != correctResponses[i])
+		if(studentResponses[i] != correctResponses[i])
 		{
 			cout << "Question " << (i + 1) << " has incorrect answer '" << studentResponses[i] << "', the correct answer is '" << correctResponses[i] << "'" << endl;
 			incorrectCounter++;
@@ -1321,7 +1321,7 @@ void lab10ex1_displayResults(char studentResponses[lab10ex1_ARRAY_SIZE], char co
 
 	// calculate the student's grade, and determine if pass or fail
 	double studentGrade = (double(lab10ex1_ARRAY_SIZE - incorrectCounter) / lab10ex1_ARRAY_SIZE) * 100.0;
-	if (studentGrade >= 70.0)
+	if(studentGrade >= 70.0)
 	{
 		cout << "The student has passed." << endl;
 	}
@@ -1353,12 +1353,12 @@ void lab10ex2()
 	int actualRows = lab10ex2_readFile(grades, lab10ex2_MAX_ROWS, inputFileName);
 	
 	// the number of rows is invalid, meaning file-to-array read was not successful
-	if (actualRows == -1)
+	if(actualRows == -1)
 	{
 		cout << "ERROR: File \"" << inputFileName << "\" could not be opened." << endl;
 	}
 	// the number of rows is 0, meaning the file contained no data
-	else if (actualRows == 0)
+	else if(actualRows == 0)
 	{
 		cout << "ERROR: The input file \"" << inputFileName << "\" did not contain any data." << endl;
 	}
@@ -1367,12 +1367,12 @@ void lab10ex2()
 	{
 		cout << "Average for all values is " << fixed << setprecision(2) << lab10ex2_average(grades, actualRows) << endl;
 
-		for (int col = 0; col < lab10ex2_MAX_COLUMNS; col++)
+		for(int col = 0; col < lab10ex2_MAX_COLUMNS; col++)
 		{
 			cout << "Average for column " << col << " is " << lab10ex2_columnAverage(grades, col, actualRows) << endl;
 		}
 
-		for (int row = 0; row < actualRows; row++)
+		for(int row = 0; row < actualRows; row++)
 		{
 			cout << "Smallest value for row " << row << " is " << lab10ex2_smallestValue(grades, row) << endl;
 		}
@@ -1395,13 +1395,13 @@ int lab10ex2_readFile(double grades[][lab10ex2_MAX_COLUMNS], int maxRowsToRead, 
 	int currentRow = 0;
 
 	// the input file was successfully opened
-	if (inputFile)
+	if(inputFile)
 	{
-		while (!inputFile.eof())
+		while(!inputFile.eof())
 		{
 			getline(inputFile, rowContents);
 
-			if (rowContents != "")
+			if(rowContents != "")
 			{
 				istringstream iss(rowContents);
 
@@ -1409,33 +1409,33 @@ int lab10ex2_readFile(double grades[][lab10ex2_MAX_COLUMNS], int maxRowsToRead, 
 				string str = "";
 				do
 				{
-				iss >> str;
-				if (str == "")
-				{
-					return 0;
-				}
-				else
-				{
-					grades[currentRow][currentColumn] = stod(str);
-				}
-				currentColumn++;
-				if (currentColumn == lab10ex2_MAX_COLUMNS)
-				{
-					break;
-				}
+					iss >> str;
+					if(str == "")
+					{
+						return 0;
+					}
+					else
+					{
+						grades[currentRow][currentColumn] = stod(str);
+					}
+					currentColumn++;
+					if(currentColumn == lab10ex2_MAX_COLUMNS)
+					{
+						break;
+					}
 
-				str = "";
-				} while (iss);
+					str = "";
+				} while(iss);
 
 				iss.clear();
 
-				if (currentColumn < 5)
+				if(currentColumn < 5)
 				{
 				return 0;
 				}
 
 				currentRow++;
-				if (currentRow == 20)
+				if(currentRow == 20)
 				{
 				break;
 				}
@@ -1470,9 +1470,9 @@ double lab10ex2_average(double values[][lab10ex2_MAX_COLUMNS], int numberRows)
 	int numElems = 0;
 	double avg = -1.0;
 
-	for (int row = 0; row < numberRows; row++)
+	for(int row = 0; row < numberRows; row++)
 	{
-		for (int col = 0; col < lab10ex2_MAX_COLUMNS; col++)
+		for(int col = 0; col < lab10ex2_MAX_COLUMNS; col++)
 		{
 			sum += values[row][col];
 			numElems++;
@@ -1499,7 +1499,7 @@ double lab10ex2_columnAverage(double values[][lab10ex2_MAX_COLUMNS], int column,
 
 	sum = 0.0;
 	numElems = 0;
-	for (int row = 0; row < numberRows; row++)
+	for(int row = 0; row < numberRows; row++)
 	{
 		sum += values[row][column];
 		numElems++;
@@ -1518,9 +1518,9 @@ double lab10ex2_smallestValue(double values[][lab10ex2_MAX_COLUMNS], int current
 {
 	double min = values[currentRow][0];
 
-	for (int col = 1; col < lab10ex2_MAX_COLUMNS; col++)
+	for(int col = 1; col < lab10ex2_MAX_COLUMNS; col++)
 	{
-		if (values[currentRow][col] < min)
+		if(values[currentRow][col] < min)
 		{
 			min = values[currentRow][col];
 		}

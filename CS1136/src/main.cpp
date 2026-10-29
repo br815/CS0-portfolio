@@ -23,9 +23,9 @@ struct LabExercise
 	/*	Use a function pointer so that a function can be called using user input:
 		1. *fp means a pointer* variable named fp
 		2. (*fp)() means (*fp) points to a function()
-		3. void (*fp)() means a pointer* fp to a function() that returns void
-		So the resulting statement is (*fp) + void() = void (*fp)() */
-    void (*fp)();
+		3. void(*fp)() means (*fp) points to a function() that returns void
+		So the resulting statement is (*fp) + void() = void(*fp)() */
+    void(*fp)();
 };
 // Global array of LabExercise structs.
 LabExercise LabExercises[20] =
@@ -51,9 +51,9 @@ int main()
 	int numLabs = sizeof(LabExercises) / sizeof(LabExercises[0]);	// # of elements = total bytes divided by bytes of 1 element
 	int linePrinter = 0;
 	cout << "Lab Exercises:" << endl;
-	for (int i = 0; i < numLabs; i++)
+	for(int i = 0; i < numLabs; i++)
 	{
-		if (i >= 0 && i <= 17)	// excludes Lab 10 exercises (the last 2 indexes, i = 18 and i = 19)
+		if(i >= 0 && i <= 17)	// excludes Lab 10 exercises (the last 2 indexes, i = 18 and i = 19)
 		{
 			cout << "| ";
 		}
@@ -86,10 +86,10 @@ int main()
 	string userChoice;	                    // stores user's chosen lab exercise(s)
 
 	bool quitLoop = false;
-	while (quitLoop == false)               // while loop to continue asking user for userChoices until they exit
+	while(quitLoop == false)				// while loop to continue asking user for userChoices until they exit
 	{
 		// 1st task: print out appropriate user prompt (depending on if user has already picked at least 1 correct lab) and read in user input
-		if (userChoices.size() < 1)
+		if(userChoices.size() < 1)
 		{
     		cout << "Pick a lab exercise (in the form #-#):" << endl;
 		}
@@ -100,9 +100,9 @@ int main()
 		cin >> userChoice;
 
 		// 2nd task: handle quit command (also depends on if user has already picked at least 1 correct lab)
-		if (userChoice == "x" || userChoice == "X")
+		if(userChoice == "x" || userChoice == "X")
 		{
-			if (userChoices.size() < 1)
+			if(userChoices.size() < 1)
 			{
 				cout << "ERROR: You must pick at least one lab exercise before quitting." << endl;
 			}
@@ -119,7 +119,7 @@ int main()
 			int labNum = 0;
 			int exNum = 0;
 			size_t delimiterPosition = userChoice.find(delimiter);
-			if (delimiterPosition != string::npos)
+			if(delimiterPosition != string::npos)
 			{
 				// Extract substrings for each part and convert to int
 				labNum = stoi(userChoice.substr(0, delimiterPosition));	// from start to dash: labNum
@@ -128,9 +128,9 @@ int main()
 
 			// loop through LabExercises for an exact match to labNum and exNum
 			bool choiceMatches = false;
-			for (int i = 0; i < numLabs; i++)
+			for(int i = 0; i < numLabs; i++)
 			{
-				if (LabExercises[i].laboratoryNum == labNum && LabExercises[i].exerciseNum == exNum)
+				if(LabExercises[i].laboratoryNum == labNum && LabExercises[i].exerciseNum == exNum)
 				{
 					choiceMatches = true;
 					userChoices.push_back({labNum, exNum});	// add int pair to vector storing valid userChoices
@@ -138,7 +138,7 @@ int main()
 				}
 			}
 
-			if (choiceMatches == false)
+			if(choiceMatches == false)
 			{
 				cout << "ERROR: You must pick a valid lab exercise in the form specified." << endl;
 			}
@@ -149,7 +149,7 @@ int main()
 
 
 	// Third, loop through userChoices to call each choice's corresponding function.
-	for (pair<int, int> choice : userChoices)	// for each int pair in the vector
+	for(pair<int, int> choice : userChoices)	// for each int pair in the vector
 	{
 		// retrieve labNum and exNum from pair<int, int>
   		int labNum = choice.first;
@@ -157,9 +157,9 @@ int main()
 
 		// same match-searching for loop logic from the previous while loop
 		bool choiceMatches = false;
-		for (int i = 0; i < numLabs; i++)
+		for(int i = 0; i < numLabs; i++)
 		{
-			if (LabExercises[i].laboratoryNum == labNum && LabExercises[i].exerciseNum == exNum)
+			if(LabExercises[i].laboratoryNum == labNum && LabExercises[i].exerciseNum == exNum)
 				{
 					cout << "NOW EXECUTING LAB #" << labNum << " EXERCISE #" << exNum << ":" << endl << endl;
 					LabExercises[i].fp();	// execute corresponding function using function ptr of the LabExercise struct at i
@@ -169,7 +169,7 @@ int main()
 						cin should be reset after each function call to ensure that future calls to cin 
 						in subsequently called functions will properly take user input. */
 					// This problem is most apparent for the termination condition of 8-1.
-					if (cin.fail())
+					if(cin.fail())
 					{
 						cin.clear();
 						cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -179,7 +179,7 @@ int main()
 					break;
 				}
 		}
-		if (choiceMatches == false)
+		if(choiceMatches == false)
 		{
 			// if earlier user input validation has been correctly managed, then this error message should never be reached
 			cout << "ERROR: Lab #" << labNum << " Exercise #" << exNum << " does not exist." << endl;
